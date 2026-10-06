@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Voxa settings</title>
+<style>
+  :root{--ink:#10222b;--mint:#7fe0c3;--paper:#f6f9f8;--line:#d5e2de}
+  body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,sans-serif}
+  main{max-width:560px;margin:40px auto;padding:0 20px}
+  h1{font-size:28px;margin:0 0 4px}
+  p.sub{margin:0 0 28px;color:#4b6670}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 18px;margin-bottom:18px}
+  .row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  h2{font-size:16px;margin:0 0 6px}
+  select,input[type=range]{max-width:260px;width:100%}
+  select{padding:6px;border:1px solid var(--line);border-radius:8px;background:#fff}
+  #saved{color:#1f7a63;height:20px;font-size:13px}
+  kbd{background:#e6efec;border-radius:4px;padding:1px 6px}
+</style></head><body><main>
+  <h1>Voxa</h1>
+  <p class="sub">Hover a paragraph or select text to hear it. Language is detected automatically.</p>
+  <section>
+    <div class="row"><label for="rate">Speed <span id="rv"></span></label><input id="rate" type="range" min="0.5" max="2" step="0.25"></div>
+    <div class="row"><label for="hover">Show play button when hovering a paragraph</label><input id="hover" type="checkbox"></div>
+    <div class="row"><label for="autoNext">Keep reading the next paragraph</label><input id="autoNext" type="checkbox"></div>
+  </section>
+  <h2>Voice per language</h2>
+  <section id="voices"></section>
+  <p>Shortcut: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> reads the selection. <kbd>Esc</kbd> stops. Change it at chrome://extensions/shortcuts.</p>
+  <div id="saved"></div>
+</main><script src="options.js"></script></body></html>
